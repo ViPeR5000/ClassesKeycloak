@@ -30,8 +30,12 @@ Useful information: https://access.redhat.com/documentation/en-us/red_hat_build_
 
 ## Step 3 start Keycloak
 ```docker run --rm --name keycloak -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:24.0.2  start-dev```
-
-
+## Step 3a Error Keycloak
+```If You get this error:
+To create the administrative user open http://localhost:8080/, or set the environment variables KEYCLOAK_ADMIN and KEYCLOAK_ADMIN_PASSWORD when starting the server.
+```
+Stop the docker run e run it again (docker run --rm --name keycloak -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:24.0.2  start-dev```
+) at this time all will work 
 
 ## Keycloak Production Mode
 
